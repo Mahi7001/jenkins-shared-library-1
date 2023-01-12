@@ -1,4 +1,4 @@
-def buildImage(String Ima) {
+def buildImage(String Image) {
     echo "building the docker image..."
     withCredentials([string(credentialsId: 'dockerpasswd1', variable: 'dockerpasswd1')]) {
          sh 'docker build -t mahesh2024/jenkins-sl:${BUILD_NUMBER} .'
